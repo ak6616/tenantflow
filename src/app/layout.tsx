@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { AuthProvider } from "@/lib/auth-context";
+import DemoModeBanner from "@/components/demo-mode-banner";
 
 export const metadata: Metadata = {
   title: "TenantFlow — Multi-tenant SaaS CRM",
@@ -16,6 +17,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="antialiased">
         <AuthProvider>{children}</AuthProvider>
+      <DemoModeBanner />
       </body>
     </html>
   );
